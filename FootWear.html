@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Correct Foot Wear</title>
+
+<script type="text/javascript">
+
+/*Input:
+ *Weather condition entered by the user.
+
+ *Processing:
+ *Use function with if else statements to analyze user input.
+ 
+ *Output:
+ *Print proper foot wear to screen for user.
+ */
+ 
+ function shoes() {
+	var weather = document.getElementById('WinputBox').value;
+	var answer;
+ 
+	if (weather == "hot") {
+	answer = "sandals";
+	}
+	else if (weather == "rain") {
+	answer = "galoshes";
+	}
+	else if (weather == "snow") {
+	answer = "boots";
+	}
+	else {
+	answer = "shoes";
+	}
+	document.getElementById('footwear').innerHTML = answer;
+	}
+ 
+ </script>
+
+</head>
+
+<body>
+
+<h1>What kind of shoes should you wear?</h1>
+<h2>When you are ready to find out enter the current weather condition and press <strong>Tell Me!</strong>:</h2><br>
+<input type="text" id="WinputBox"><br><br>
+<div id="footwear"></div><br><br>
+
+<button type = "button" onClick = "shoes()"><strong>Tell Me!</strong></button><br><br>
+
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Guessing Game</title>
+
+<script type="text/javascript">
+/*
+Input: A guess from the user.
+Processing: Check to see if guess is correct.
+Output:  If correct return true, otherwise return false. Loop until true or game over.
+*/
+
+function numberGuessGame(guess,answer) {
+
+var guessCount = 0;
+
+do {
+	if (guessCount > 9) {
+		message = "You loose :( Please try again!";
+		window.alert(message);
+		var messageGuess = "Number of guesses: " + guessCount;
+		window.alert(messageGuess);
+		return 
+		break;}
+	else if (guess < answer) {
+		message = guess + " is too low. Please enter another integer.";
+		guess = window.prompt(message);
+		guessCount++;}
+	else if (guess > answer) {
+		message = guess + " is too high. Please enter another integer.";
+		guess = window.prompt(message);
+		guessCount++}
+} while (guess != answer);
+
+if (guess == answer){
+	message = guess + " is correct!"; 
+	var messageGuess = "Number of guesses: " + guessCount;
+	window.alert(message);
+	window.alert(messageGuess);}
+	
+}
+</script>
+
+</head>
+<body>
+<h1>NUMBER GUESSING GAME</h1>
+<button type="button" onClick="start()">Play</button>
+<script type="text/javascript">
+function start() {
+	var message = 
+	"I'm thinking of a number between 1 and 100.\n" +
+	"Try to guess it! You have 10 guesses to win!\n" +
+	"Please enter an integer between 1 and 100.";
+	var a = Math.floor((Math.random()*100)+1);
+	var g = parseInt(window.prompt(message));
+	numberGuessGame(g,a);}
+</script>
+</body>
+</html>

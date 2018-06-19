@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Student Class</title>
+
+<script type="text/javascript">
+/*Defining Table:
+ *Input:
+ *student name
+ *number of completed university credits
+ 
+ *Processing:
+ *number of credits >= (table) And number of credits < (table) message = ?
+ 
+ *Output:
+ *student's name and year in school (feshman, sophomore, etc.)
+*/
+
+//this function is called when button is clicked
+function university() {
+	var credits = parseInt(document.getElementById('creditsInput').value);
+	var name = document.getElementById('nameInput').value;
+	var message;
+	
+	if (credits >= 0 && credits < 30) {
+	message = name +", you are a freshman!"}
+	else if (credits >= 30 && credits < 60) {
+	message = name +", you are a sophomore!!"}
+	else if (credits >=60 && credits < 90) {
+	message = name +", you are a junior!!!"}
+	else if (credits >= 90) {
+	message = name +", you are a senior!!!!"}	
+
+window.alert(message);
+} 
+</script>
+
+</head>
+
+<body>
+<h1>College Student Class!</h1>
+<h2>Find out what college student class you are in by entering your name and number of completed college credits below:</h2>
+<p>Depending on how many credits you have completed, you can either be a freshman, sophomore, junior, or senior.  If your not sure where you fall go ahead and enter 
+your name and number of completed college credits to find out!</p>
+
+<!--these are the nameInput and creditsInput boxes-->
+<strong>Please enter your name:</strong>
+<input type="text" size="10" id="nameInput">
+
+<strong>Please enter the number of completed college credits:</strong>
+<input type="text" size="5" id="creditsInput">
+
+<!--this is the button to call the function university()-->
+<button type="button" onClick="university()"><strong>My Class!</strong></button>
+
+</body>
+
+</html>

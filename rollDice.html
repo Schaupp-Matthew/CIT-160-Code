@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Roll Dice</title>
+<script type="text/javascript">
+/*
+Input: User clicks a button to roll 5 dice.
+Processing: Using an array, increment the element number matching the number rolled. 
+For example, if the value of the die is 6, then increment the counter value at element 6 (not index 6). 
+Remove the first element of the array before you output.
+Output: Output the array as a comma separated list. 
+*/
+
+function rollDice() {
+var list = [];
+for (i = 0; i < 5; i++) {
+list[i] = Math.floor(Math.random() * 6 + 1);
+}
+document.getElementById('output1').innerHTML = list;
+list = removeFirst(list);
+list = doInputOutput(list);
+document.getElementById('output2').innerHTML = list;
+}
+
+function removeFirst(list) {
+var noFirst = [];
+for (var i = 0; i < list.length; i++) {
+	if (i > 0) {
+		noFirst.push(list[i]);}}
+return noFirst;		
+}
+
+function doInputOutput(list) {
+var dice;
+for (i = 0; i < list.length; i++) {
+list[i] = list[i]++;
+dice = dice + list[i] + ", ";
+}
+return dice;
+}
+</script>
+</head>
+<body>
+<h1>Click the button to roll the dice and see what numbers you get.</h1>
+<button type="button" onClick="rollDice()">Roll Dice</button>
+<div id="output1"></div>
+<div id="output2"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sort List</title>
+<script type="text/javascript">
+/*
+Input: List of names from user in textarea.
+Processing: Read names from first text area. Store them in an array using .split. 
+Then sort the array using .sort. Then remove duplicates using function. Then join array using .join.
+Output: and finaly display array  without duplicates.
+*/
+function sortArray() {
+var list = document.getElementById('input').value;
+list = list.split("\n");
+list = list.sort();
+list = removeDups(list);
+list = list.join("\n");
+document.getElementById('output').innerHTML = list;
+}
+
+function removeDups(list) {
+var noDups = [];
+for (var i = 0; i < list.length; i++) {
+	if (noDups.indexOf(list[i]) == -1){
+		noDups.push(list[i]);}
+	}
+return noDups;
+}
+</script>
+</head>
+<body>
+<h1>Please enter a list of words in the first input box and seperate each new word by pressing Enter.  Then click sort to sort alphebetically.</h1>
+<textarea style="margin: 1px; height: 300px; width: 200px;" id="input"></textarea>
+<button type="button" onClick="sortArray()">Sort</button>
+<textarea style="margin: 1px; height: 300px; width: 200px;" id="output"></textarea>
+</body>
+</html>

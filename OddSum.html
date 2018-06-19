@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<title>Odd Sum</title>
+<meta charset="utf-8">
+<meta name="author" content="Matthew Schaupp">
+
+<script type="text/javascript">
+
+/*
+*Input: asks the user for an integer n and then outputs
+*Processing: Determine odd integers and sum them
+*Output: the sum of all the odd integers between 1 and n, inclusive
+*/
+
+function oddInt() {
+var sum = 0;
+var increment;
+var n = parseInt(document.getElementById('inputBox').value);
+	for (increment = 1; increment <= n; increment += 2) {
+		sum += increment;
+	}	
+	
+document.getElementById('outputDiv').innerHTML = "Odd sum = " + sum;
+}
+
+</script>
+
+</head>
+
+<body>
+<h1>Want to know the sum of all of the odd numbers between one and any number you enter?  Go ahead and give it a try:</h1>
+<h2>Please enter any integer in the box below:</h2>
+<input type="text" size="10" id="inputBox">
+<button type="button" onClick="oddInt()">Odd Sum</button>
+<br>
+<br>
+<div id="outputDiv"></div>
+</body>
+</html>

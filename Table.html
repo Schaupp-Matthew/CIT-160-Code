@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script type="text/javascript">
+/*
+Write a defining table and a program that asks the user for an integer n and then outputs the following table.
+
+n	2*n	3*n	n*n	n*n*n
+1	2	3	1	1
+2	4	6	4	8
+3	6	9	9	27
+⋮	⋮	⋮	⋮	⋮
+n	2n	3n	n2	n3
+
+
+Defining Table:
+Input: user input box for an integer which is initialized as the declared variable n.
+Processing: user for loop to create table for n, 2*n, 3*n, n*n, and n*n*n.
+Output: Output table to user in the same format.
+*/
+
+function table(){
+
+var n = parseFloat(document.getElementById('integer').value);
+
+for (var i=1;i<=n;i++){
+	
+	document.write(i + " " + 2 * i + " " + 3 * i + " " + i*i + " " + i*i*i + "<br>");
+	
+}
+}
+</script>
+</head>
+<body>
+<h1>Integer Table</h1>
+<h2>Please enter any integer in the box bellow and click the button to see the table:</h2>
+<input type="text" size="10" id="integer">
+<button type="button" onClick="table()">Table</button>
+<pre>n  2*n  3*n  n*n  n*n*n</pre>
+<div id="heading"></div>
+<div id="outputDiv"></div>
+</body>
+</html>

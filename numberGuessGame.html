@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Guessing Game</title>
+
+<script type="text/javascript">
+/*function isRight(guess, answer) 
+
+Remove this bit from the other function and place it in this function.
+
+if (guess < answer) {
+            message = guess +
+            " is too low.  Please enter another integer.";
+        }
+        else if (guess > answer) {
+            message = guess +
+            " is too high.  Please enter another integer.";
+        }
+and then return true when the guess is correct otherwise false.
+
+The numberGuessGame function will continue to call the isRight function until it is true. It will add one to a variable each time the user is wrong.
+
+Then will tell the user when they got it right and how many guesses in a message
+
+Input: A guess from the user.
+Processing: Check to see if guess is correct.
+Output:  If correct return true, otherwise return false. Loop until true or game over.*/
+
+function numberGuessGame(guess,answer) {
+var message = 
+	"I'm thinking of a number between 1 and 100.\n" +
+	"Try to guess it! You have 10 guesses to win!\n" +
+	"Please enter an integer between 1 and 100.";
+ 
+var guess;
+var guessCount = 0;
+
+do {
+	guess = parseInt(window.prompt(message));
+	if (guessCount > 10) {
+		message = "You loose :(";
+		window.alert(message);
+		break;}
+	else if (guess < answer) {
+		message = guess + " is too low. Please enter another integer.";
+		guessCount++;}
+	else if (guess > answer) {
+		message = guess + " is too high. Please enter another integer.";
+		guessCount++}
+} while (guess != answer);
+
+if (guess == answer){
+	message = guess + " is correct!"; 
+	var messageGuess = "Number of guesses: " + guessCount;
+	window.alert(message);
+	window.alert(messageGuess);}
+}
+</script>
+
+</head>
+<body>
+<h1>NUMBER GUESSING GAME</h1>
+<button type="button" onClick="numGame()">Play</button>
+<script type="text/javascript">
+function numGame() {
+	var a = Math.floor((Math.random()*100)+1);
+	var g;
+	numberGuessGame(g,a);
+}
+</script>
+</body>
+</html>
+

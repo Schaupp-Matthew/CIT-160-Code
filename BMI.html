@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>BMI</title>
+
+<script type="text/javascript">
+/*
+Write a defining table and a JavaScript program to compute and output the user's Body Mass Index (BMI). Your program will read from the keyboard their weight in pounds (w) and 
+height in inches (h). Use the formula BMI = (w * 703) / h2 to calculate BMI.  Round two decimal places. The output below is when the weight is 145 lbs and the height is 64 inches.
+
+Output: 24.9
+
+You will have two functions with these headers: 
+
+function doInputOutput()
+function getBMI(weight, height)
+*/
+
+function doInputOutput() {
+var w = parseFloat(document.getElementById('inputWeight').value);
+var h = parseFloat(document.getElementById('inputHeight').value);
+var output = getBMI(w, h);
+document.getElementById('outputDiv').innerHTML = output;
+}
+
+function getBMI(weight, height) {
+var BMI = Math.round((weight * 703) / (height * height));
+return BMI;
+}
+
+</script>
+
+</head>
+<body>
+<h1>Your Body Mass Index</h1>
+<p>Please enter the required information below:</p>
+<p>Please enter your weight in pounds:</p><br><input type="text" id="inputWeight"><br>
+<p>Please enter your height in inches:</p><br><input type="text" id="inputHeight"><br>
+<button type="button" onClick="doInputOutput()">Calculate BMI</button><br>
+<div id='outputDiv'></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Times Tables</title>
+<script type="text/javascript">
+
+/*
+Write a defining table and a program to print the five times table from 1 to 12 in this format:
+5 x 1 = 5
+5 x 2 = 10
+
+Defining Table:
+Input: User clicks a button to see the 5-times table from 1 to 12.
+Processing: Use for loop to print table using (var i = 1, i <= 12, i++){
+answer = 5 * i;}.  
+Output: Output string "5 x" + i + "=" + answer.
+*/
+function times(){
+var i;
+var answer;
+for (i=1;i<=12;i++){
+	answer = 5 * i;
+	document.write("5 x " + i + "=" + answer + "<br>");
+}
+}
+
+</script>
+</head>
+<body>
+<h1>The Five-Times Table</h1>
+<h2>Click the button below to view the 5-times table from 1 to 12:</h2>
+<button type="button" onClick="times()">5-times table</button>
+</body>
+</html>

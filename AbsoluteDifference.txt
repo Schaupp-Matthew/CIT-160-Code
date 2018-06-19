@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Absolute Difference</title>
+
+<script type="text/javascript">
+
+/*Input:
+ *Two numbers entered by the user.
+
+ *Processing:
+ *Find the difference between the two numbers entered
+ *Use if/else statements to  ensure output is positive.
+ 
+ *Output:
+ *Print absolute difference on screen
+ */
+ 
+ var x = getElementById
+ var y = 
+ var answer
+ 
+ function absolutediff()
+	if ((x - y) < 0) {
+	answer = -1 * (x - y)}
+	else {
+	answer = (x - y)}
+ 
+ </script>
+
+</head>
+
+<body>
+
+<h1>The Absolute Difference</h1>
+
+</body>
+
+</html>

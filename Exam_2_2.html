@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script type="text/javascript">
+/* Input: Three integers from user initialized to declared variables: start, end, and divisor.
+* Processing:  loop divisor += divisor. if statment (divisor >= start && divisor <= end) {document.getElementById().innerHTML = divisor + " ";}
+* Output: Output to a div all the integers between start and end, inclusive, that are evenly divisible by divisor. The output integers must be separated by spaces.
+*/
+
+function integers() {
+
+var start = parseInt(document.getElementById('start').value);
+var end = parseInt(document.getElementById('end').value);
+var divisor = parseInt(document.getElementById('divisor').value);
+var output;
+
+for (var i = 0;i <= end; i++) {
+	if (i >= start && i <= end && i % divisor == 0) {
+	output += i + " ";
+	document.getElementById('output').innerHTML = output;}
+}
+
+}
+
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="integers()">Click</button>
+<div id="output"></div>
+</body>
+</html>

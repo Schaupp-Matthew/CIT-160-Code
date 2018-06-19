@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Count Evens</title>
+<script type="text/javascript">
+function countEvens() {
+var n = parseInt(document.getElementById('numOne').value);
+var list = new Array(n + 1);
+for (var i = 0; i < list.length; i++) {
+	list[i] = i;}
+numEven = calEvens();
+document.getElementById('outputDiv').innerHTML = numEven;
+ 
+function calEvens() {
+var count = 0;
+for (var i = 0; i < list.length - 1; i++) {
+	if (i % 2 == 0) {count++}
+	else {count = count}}
+	return count;
+}
+}
+</script>
+</head>
+<body>
+<h1>Here is a program that will count how many numbers are even between zero and the integer you enter bellow.</h1>
+<h2>Please enter an integers:</h2>
+<input type="text" id="numOne">
+<button type="button" onClick="countEvens()">How Many Evens?</button>
+<div id="outputDiv"></div>
+</body>
+</html>

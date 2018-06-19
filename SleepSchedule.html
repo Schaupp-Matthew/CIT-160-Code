@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Sleep Schedule</title>
+
+<script type="text/javascript">
+/*Input:
+ *Input obtained from the computer's clock
+ 
+ *Processing:
+ *Determine sleep schedule using boolean logic, specified holidays, and current date
+ 
+ *Output:
+ *Pop-up alert to sleep in or not
+ */
+
+//here is the function to determine sleep schedule
+function sleep() {
+var now = new Date();
+var month = now.getMonth();
+var dayOfMonth = now.getDate();
+var dayOfWeek = now.getDay();
+var message;
+
+	if (dayOfWeek==0 || dayOfWeek==6){
+	message = "SLEEP IN!";}
+	else if (month==0 && dayOfMonth==1) {
+	message = "SLEEP IN!";}
+	else if (month==6 && dayOfMonth==4) {
+	message = "SLEEP IN!";}
+	else if (month==11 && dayOfMonth==25) {
+	message = "SLEEP IN!";}
+	else if (now) {
+	message = "GET UP :-(";}
+
+window.alert(message);
+}
+
+
+
+</script>
+
+</head>
+
+<body style="background-color:lightblue;">
+<center><h1 style="font-size:600%;">CLICK THIS BUTTON TO FIND OUT IF YOU CAN SLEEP IN TODAY!</h1></center><br>
+<center><button type="button" style="font-size:300%;" onClick="sleep()"><strong>DO I GET TO SLEEP IN TODAY OR NOT?</strong></button></center><br>
+<center>Current Date:</center><br>
+<center><div id="currentDate"></div></center>
+
+<script>
+document.getElementById("currentDate").innerHTML = new Date();
+</script>
+
+</body>
+
+</html>

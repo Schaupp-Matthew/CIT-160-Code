@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Tetrahedron</title>
+<script type="text/javascript">
+
+// Your JavaScript function belongs here.
+function tetrahedron() {
+	var a = parseFloat(document.getElementById(edge));
+	var v = (a * a * a) / (6 * Math.sqrt(2));
+	document.getElementById(volume).innerHTML.value = v
+}
+
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Tetrahedron</h1>
+    Edge Length (meters) <input type="text" id="edge" size="3"><br>
+    <button type="button" onclick="tetrahedron()">Compute Volume</button><br>
+    Volume (meters3) <div id="volume"></div>
+</body>
+</html>

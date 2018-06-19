@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Number Sort</title>
+<script type="text/javascript">
+function sortNumbers() {
+var list = new Array(10);
+list[0] = parseFloat(document.getElementById('numOne').value);
+list[1] = parseFloat(document.getElementById('numTwo').value);
+list[2] = parseFloat(document.getElementById('numThree').value);
+list[3] = parseFloat(document.getElementById('numFour').value);
+list[4] = parseFloat(document.getElementById('numFive').value);
+list[5] = parseFloat(document.getElementById('numSix').value);
+list[6] = parseFloat(document.getElementById('numSeven').value);
+list[7] = parseFloat(document.getElementById('numEight').value);
+list[8] = parseFloat(document.getElementById('numNine').value);
+list[9] = parseFloat(document.getElementById('numTen').value);
+
+output = list.sort(compareNumbers);
+document.getElementById('outputDiv').innerHTML = output;
+}
+
+function compareNumbers(x, y) {
+	return x - y;
+}
+</script>
+</head>
+<body>
+<h1>Please write a list of numbers to sort:</h1>
+<input type="text" id="numOne"><br>
+<input type="text" id="numTwo"><br>
+<input type="text" id="numThree"><br>
+<input type="text" id="numFour"><br>
+<input type="text" id="numFive"><br>
+<input type="text" id="numSix"><br>
+<input type="text" id="numSeven"><br>
+<input type="text" id="numEight"><br>
+<input type="text" id="numNine"><br>
+<input type="text" id="numTen"><br>
+<button type="button" onClick="sortNumbers()">Sort</button>
+<div id="outputDiv></div>
+</body>
+</html>

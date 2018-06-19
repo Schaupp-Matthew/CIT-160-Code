@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script type="text/javascript">
+/* Input: Two numbers from users input from input boxes
+* Processing: declare and initialize two variables (a and b) to hold values from input boxes. if statement to use logic: (a > 15 && b > 15 || (a + b) > 15).
+* Output:  Outputs to a div "True" if both of the numbers are greater than 15 or if their sum is greater than 15. Otherwise your function should output "False" to the div.
+*/
+
+function fifteen() {
+var a = parseFloat(document.getElementById("one").value);
+var b = parseFloat(document.getElementById("two").value);
+var answer;
+
+	if ((a > 15 && b > 15) || (a + b) > 15) {
+	answer = "True";
+	}
+	else {
+	answer = "False"}
+	
+document.getElementById('output').innerHTML = answer
+}
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="fifteen()">Click</button>
+<div id="output"></div>
+</body>
+</html>
